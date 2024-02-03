@@ -1,18 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
-void decTObin(int num)
+#define ll long long int
+#define ff first
+#define ss second
+const int SIZE=2e5+9;
+vector<int>v[SIZE];
+vector<int>v[SIZE];
+void decToBin(int num, int id)
 {
-    // num is 64 to bit integer than start loop from 63
-    for(int i=31;i>=0;i--)
+    for (int i = 30; i >= 0; i--)
     {
-        cout<<((num>>i)&1);
+        v[id].push_back(((num >> i) & 1));
     }
-    cout<<endl;
 }
 int main()
 {
-    int num;
-    cin>>num;
-    decTObin(num);
+    int n;
+    cin>>n;
+    int arrayy[n+5];
+    for(int i=0; i<n; i++)
+    {
+        cin>>arrayy[i];
+        decToBin(arrayy[i], i);
+    }
     return 0;
 }
