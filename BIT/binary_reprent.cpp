@@ -5,7 +5,6 @@ using namespace std;
 #define ss second
 const int SIZE=2e5+9;
 vector<int>v[SIZE];
-vector<int>v[SIZE];
 void decToBin(int num, int id)
 {
     for (int i = 30; i >= 0; i--)
